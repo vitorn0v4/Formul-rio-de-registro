@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<title>Formulário de registro</title>
+<body>
+    <h1>REGISTRO</h1>
+    <p>Preencha os dados abaixo para registrar-se</p>
+    <form method="post" action="https://register-demo.freecodecamp.org">
+        <fieldset>
+            <label for="primeiro-nome">Digite seu nome: <input type="text" id="primeiro-nome" name="nome1" required/></label>
+            <label for="segundo-nome">Digite seu sobrenome: <input type="text" id="segundo-nome" name="nome2" required/></label>
+            <label for="email">Digite seu email: <input type="email" required id="email" name="email" class="email"/></label>
+            <label for="password">Crie sua senha: <input pattern="[a-z0-5]{8,}" type="password" required id="password" required name="password" class="password"/></label>
+        </fieldset>
+        <fieldset>
+            <label for="pessoal"><input type="radio" id="pesoal" name="account" class="inline"/> Conta pessoal</label>
+            <label for="profissional"><input type="radio" id="profissional" class="inline" name="account"> Conta pessoal</label>
+            <label for="terms"><input type="checkbox" id="terms" name="terms" class="inline" required/> Eu aceito os <a href="#">termos e condições</a></label>
+        </fieldset>
+        <fieldset>
+            <label>Adicione uma foto de perfil:</label>
+            <input type="file" required id="profile-btn" name="profile" hidden/>
+            <label id="profile-btn" for="profile-btn">Carregar imagem</label>
+            <label for="age">Insira sua idade (anos):<input type="number" id="age" class="age"/></label>
+            <label for="reference">Como você nos conheceu?</label>
+                <select id="reference" class="select">
+                    <option value="1">Facebook</option>
+                    <option value="2">Instagram</option>
+                    <option value="3">Twitter</option>
+                    <option value="4">Youtube</option>
+                </select>
+            <label for="bio">Fale um pouco sobre você:
+                <textarea placeholder="insira sua biografia..." id="bio" name="bio" class="bio" rows="5" cols="30"></textarea>
+            </label>
+        </fieldset>
+    <button type="submit" class="submit" name="buttom-submit">Enviar</button>
+</body>
+</html>
